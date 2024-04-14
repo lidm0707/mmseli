@@ -25,16 +25,19 @@ def importdata():
     parsed_json = json.loads(data)
     return parsed_json
 def test_login_button():
+
+    print('strad')
     EXTENSION_PATH = 'MMask.crx'
 
     opt = Options()
-    # opt.add_argument("--headless")
+    opt.add_argument("--headless=new")
     opt.add_argument('--disable-gpu')
     opt.add_argument("--no-sandbox")
     opt.add_extension(EXTENSION_PATH)
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=opt)
     while len(driver.window_handles) == 1 :
         time.sleep(0.5)
+        print(driver.window_handles)
        
     driver.switch_to.window(driver.window_handles[1])
     print(driver.window_handles)
@@ -84,6 +87,7 @@ def test_login_button():
     time.sleep(0.2)
     click(driver,'//*[@id="popover-content"]/div/div/section/div[2]/div/button[1]')
     #https://app.uniswap.org/swap
+    print('mid')
     driver.switch_to.window(driver.window_handles[0])
     driver.get('https://app.uniswap.org/swap')
     click(driver,'//*[@id="root"]/span/span/div[1]/nav/div/div[3]/div/div[3]/div/button')
@@ -96,7 +100,7 @@ def test_login_button():
     click(driver,'//*[@id="app-content"]/div/div[1]/div/div[3]/div[2]/footer/button[2]')
     driver.switch_to.window(driver.window_handles[0])
     time.sleep(5)
-    
+    print('befor uni')
     
     while True :
         millisec = str(int(round(time.time() * 1000)))
