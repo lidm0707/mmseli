@@ -14,7 +14,7 @@ from selenium.webdriver.chrome.service import Service
 
 def waitLoad(worker):
     WebDriverWait(worker, 200).until(EC.invisibility_of_element_located((By.XPATH, "//div[contains(@class, 'mm-box') and contains(@class, 'loading-overlay')]")))
-    time.sleep(1)
+    time.sleep(2)
      
 def typingCustome(worker,location,string):
     WebDriverWait(worker, 5).until(EC.presence_of_element_located((By.XPATH, location))).send_keys(string)
