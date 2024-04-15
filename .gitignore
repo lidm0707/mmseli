@@ -5,10 +5,11 @@ picture
 results
 .env
 log.html
+log.txt
 MMask.pem
 output.xml
 report.html
-dockerfile
+
 
 
 

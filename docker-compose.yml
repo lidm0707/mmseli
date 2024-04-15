@@ -1,0 +1,11 @@
+services:
+  web:
+    container_name: web3
+    restart: always
+    build: ./
+    volumes:
+      - ./:/app
+    logging:
+      driver: .log.txt
+
+
