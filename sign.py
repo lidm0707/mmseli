@@ -32,7 +32,7 @@ def importdata():
     return parsed_json
 
 def main():
-    logging.basicConfig(filename='log.txt', level=logging.DEBUG, 
+    logging.basicConfig(filename='log.txt', level=logging.INFO, 
                     format='%(asctime)s - %(levelname)s - %(message)s')
     global driver
     logging.info('strad')
