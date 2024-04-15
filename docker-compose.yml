@@ -5,7 +5,5 @@ services:
     build: ./
     volumes:
       - ./:/app
-    logging:
-      driver: .log.txt
 
 
