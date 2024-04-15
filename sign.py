@@ -107,6 +107,8 @@ def main():
         logging.info('befor uni')
         logging.info('This is an info message')
         logging.info('finish')
+        with open('log.txt', 'w') as file:
+            file.write('')
     except Exception as e:
         print(e)
         # driver.save_screenshot("./picture/%s.png" % str(int(round(time.time() * 1000))))
